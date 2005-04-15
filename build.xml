@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+/* Copyright 2002-2004 Apache Software Foundation
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<project default="dist" name="commons-sql" basedir=".">
+    <property file="${user.home}/build.properties" />
+    <property file="build.properties"/>
+
+    <path id="compilation-classpath">
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar"/>
+            <include name="**/*.zip"/>
+        </fileset>
+        <pathelement path="${build.java.dir}"/>
+        <pathelement path="${build.test.dir}"/>
+    </path>
+
+    <target name="init"
+            description="Initializes the build process">
+        <tstamp/>
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${build.java.dir}"/>
+        <mkdir dir="${dist.dir}"/>
+    </target>
+
+    <target name="compile"
+            description="Compiles the code"
+            depends="init">
+        <javac srcdir="${src.java.dir}"
+               destdir="${build.java.dir}"
+               deprecation="true"
+               debug="true"
+               optimize="false">
+            <classpath refid="compilation-classpath"/>
+        </javac>
+    </target>
+
+    <target name="jar"
+            description="Creates the jar"
+            depends="compile">
+        <copy todir="${build.java.dir}/resources">
+            <fileset dir="${src.resources.dir}"/>
+        </copy>
+        <copy todir="${build.java.dir}">
+            <fileset dir="${src.java.dir}" includes="**/*.betwixt"/>
+        </copy>
+        <jar jarfile="${dist.dir}/${dist-filename-prefix}.jar"
+             basedir="${build.java.dir}"/>
+    </target>
+
+    <target name="clean"
+            description="Cleans up the generated directories">
+        <delete failonerror="false"
+                dir="${build.dir}"/>
+        <delete failonerror="false"
+                dir="${dist.dir}"/>
+    </target>
+
+    <target name="javadoc"
+            description="Generates javadoc"
+            depends="init">
+        <javadoc use="true"
+                 protected="true"
+                 destdir="${build.javadoc.dir}"
+                 author="true"
+                 doctitle="${javadoc.title}"
+                 windowtitle="${javadoc.title}"
+                 bottom="${javadoc.footer}"
+                 version="true"
+                 sourcepath="${src.java.dir}"
+                 packagenames="org.*">
+            <classpath refid="compilation-classpath"/>
+        </javadoc>
+    </target>
+
+    <target name="dist"
+            description="Creates the distribution"
+            depends="jar, javadoc">
+        <jar jarfile="${dist.dir}/${dist-filename-prefix}-javadoc.jar"
+             basedir="${build.javadoc.dir}"/>
+    </target>
+
+    <target name="compile-tests"
+            description="Compiles the unit tests"
+            depends="compile">
+        <mkdir dir="${build.test.dir}"/>
+        <javac srcdir="${src.test.dir}"
+               destdir="${build.test.dir}"
+               deprecation="true"
+               debug="true"
+               optimize="false">
+            <classpath refid="compilation-classpath"/>
+        </javac>
+    </target>
+
+    <target name="junit"
+            description="Runs the test cases"
+            depends="compile-tests">
+        <junit dir="."
+               printSummary="yes"
+               fork="true"
+               haltonerror="false">
+            <formatter type="xml"/>
+            <formatter type="plain"/>
+            <classpath refid="compilation-classpath"/>
+            <batchtest todir="${build.test.dir}">
+                <fileset dir="${src.test.dir}"
+                         includes="**/Test*.java"/>
+            </batchtest>
+        </junit>
+    </target>
+
+    <target name="junit-report"
+            description="Creates a test report in html form">
+        <junitreport todir="${build.test.dir}">
+            <fileset dir="${build.test.dir}" casesensitive="false">
+                <include name="test*.xml"/>
+            </fileset>
+            <report format="frames"
+                    todir="${build.test.dir}"/>
+        </junitreport>
+    </target>
+
+    <!-- Doesn't work yet, the site.xsl needs work -->
+    <target name="doc" description="Creates documentation via XSLT">
+        <mkdir dir="${build.doc.dir}"/>
+        <style basedir="${src.doc.dir}"
+               destdir="${build.doc.dir}"
+               extension=".html"
+               style="${src.doc.dir}/stylesheets/site.xsl"
+               excludes="empty.xml"
+               includes="**/*.xml">
+          <param name="relative-path" expression="."/>
+        </style>
+        <copy todir="${build.doc.dir}/images" filtering="no">
+          <fileset dir="${src.doc.dir}/images">
+            <include name="**/*.gif"/>
+            <include name="**/*.jpeg"/>
+            <include name="**/*.jpg"/>
+            <include name="**/*.png"/>
+          </fileset>
+        </copy>
+    </target>
+</project>
