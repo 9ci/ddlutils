@@ -1,0 +1,11 @@
+Testsuite: org.apache.ddlutils.platform.TestCloudscapePlatform
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,422 sec
+------------- Standard Error -----------------
+log4j:WARN No appenders could be found for logger (org.apache.ddlutils.platform.SqlBuilder).
+log4j:WARN Please initialize the log4j system properly.
+------------- ---------------- ---------------
+
+Testcase: testColumnConstraints took 0,256 sec
+Testcase: testTableConstraints took 0,05 sec
+Testcase: testColumnTypes took 0,033 sec
+Testcase: testCharacterEscaping took 0,023 sec

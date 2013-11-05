@@ -1,0 +1,11 @@
+Testsuite: org.apache.ddlutils.platform.TestMSSqlPlatform
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,682 sec
+------------- Standard Error -----------------
+log4j:WARN No appenders could be found for logger (org.apache.ddlutils.platform.SqlBuilder).
+log4j:WARN Please initialize the log4j system properly.
+------------- ---------------- ---------------
+
+Testcase: testColumnTypes took 0,352 sec
+Testcase: testColumnConstraints took 0,118 sec
+Testcase: testTableConstraints took 0,083 sec
+Testcase: testCharacterEscaping took 0,064 sec

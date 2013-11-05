@@ -1,0 +1,478 @@
+Testsuite: org.apache.ddlutils.alteration.TestIndexComparison
+Tests run: 19, Failures: 0, Errors: 19, Skipped: 0, Time elapsed: 0,235 sec
+
+Testcase: testAddMultiColumnIndex1 took 0,065 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testAddMultiColumnIndex1(TestIndexComparison.java:156)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+
+Testcase: testAddMultiColumnIndex2 took 0,004 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testAddMultiColumnIndex2(TestIndexComparison.java:199)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+
+Testcase: testAddSingleColumnIndex2 took 0,004 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testAddSingleColumnIndex2(TestIndexComparison.java:101)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+
+Testcase: testDropColumnFromMultiColumnIndex took 0,012 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testDropColumnFromMultiColumnIndex(TestIndexComparison.java:779)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+
+Testcase: testAddColumnAndChangeIndexColumnOrder took 0,006 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testAddColumnAndChangeIndexColumnOrder(TestIndexComparison.java:840)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+
+Testcase: testDropColumnAndChangeIndexColumnOrder took 0,004 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testDropColumnAndChangeIndexColumnOrder(TestIndexComparison.java:905)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+
+Testcase: testDropIndex1 took 0,004 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testDropIndex1(TestIndexComparison.java:957)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+
+Testcase: testDropIndex2 took 0,003 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testDropIndex2(TestIndexComparison.java:1003)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+
+Testcase: testAddAndDropIndex took 0,003 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testAddAndDropIndex(TestIndexComparison.java:1046)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+
+Testcase: testAddColumnToMultiColumnIndex took 0,003 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testAddColumnToMultiColumnIndex(TestIndexComparison.java:414)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+
+Testcase: testAddColumnsToSingleColumnIndex took 0,003 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testAddColumnsToSingleColumnIndex(TestIndexComparison.java:469)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+
+Testcase: testChangeIndexColumnOrder took 0,005 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testChangeIndexColumnOrder(TestIndexComparison.java:522)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+
+Testcase: testAddIndexColumn took 0,003 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testAddIndexColumn(TestIndexComparison.java:574)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+
+Testcase: testRemoveIndexColumn took 0,003 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testRemoveIndexColumn(TestIndexComparison.java:626)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+
+Testcase: testChangeIndexType took 0,005 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testChangeIndexType(TestIndexComparison.java:679)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+
+Testcase: testDropColumnFromSingleColumnIndex took 0,005 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testDropColumnFromSingleColumnIndex(TestIndexComparison.java:724)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+
+Testcase: testAddNewColumnToMultiColumnIndex took 0,003 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testAddNewColumnToMultiColumnIndex(TestIndexComparison.java:275)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+
+Testcase: testAddNewColumnsToSingleColumnIndex took 0,004 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testAddNewColumnsToSingleColumnIndex(TestIndexComparison.java:338)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+
+Testcase: testAddSingleColumnIndex1 took 0,003 sec
+	Caused an ERROR
+org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+org.apache.ddlutils.io.DdlUtilsXMLException: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:52)
+	at org.apache.ddlutils.io.DatabaseIO.read(DatabaseIO.java:269)
+	at org.apache.ddlutils.TestBase.parseDatabaseFromString(TestBase.java:63)
+	at org.apache.ddlutils.alteration.TestIndexComparison.testAddSingleColumnIndex1(TestIndexComparison.java:62)
+Caused by: org.xml.sax.SAXParseException; schema_reference.4: Fallo al leer el documento de esquema 'null', porque 1) no se ha encontrado el documento; 2) no se ha podido leer el documento; 3) el elemento raíz del documento no es <xsd:schema>.
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.error(ErrorHandlerWrapper.java:134)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:437)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:347)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaErr(XSDHandler.java:4166)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.reportSchemaError(XSDHandler.java:4149)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument1(XSDHandler.java:2484)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.getSchemaDocument(XSDHandler.java:2187)
+	at com.sun.org.apache.xerces.internal.impl.xs.traversers.XSDHandler.parseSchema(XSDHandler.java:573)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadSchema(XMLSchemaLoader.java:616)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:574)
+	at com.sun.org.apache.xerces.internal.impl.xs.XMLSchemaLoader.loadGrammar(XMLSchemaLoader.java:540)
+	at com.sun.org.apache.xerces.internal.jaxp.validation.XMLSchemaFactory.newSchema(XMLSchemaFactory.java:252)
+	at javax.xml.validation.SchemaFactory.newSchema(SchemaFactory.java:627)
+	at org.apache.ddlutils.io.ModelValidator.validate(ModelValidator.java:45)
+

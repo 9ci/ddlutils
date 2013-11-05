@@ -99,7 +99,7 @@
   <!-- ================================================================== -->
   <!-- Build the documentation                                            -->
   <!-- ================================================================== -->
-  <target name="doc"
+<!--  <target name="doc"
           description="Builds the complete documentation">
     <fail message="Please set the FORREST_HOME environment variable to the 'src/core' subdirectory of your Forrest installation. If you don't have yet installed Forrest, you can get it from http://forrest.apache.org.">
       <condition>
@@ -114,24 +114,26 @@
     <delete dir="${build.doc.dir}"
     	    failonerror="false"/>
     <mkdir dir="${build.doc.dir}"/>
-
+-->
     <!-- Copy all forrest src stuff to a temporary directoy -->
-    <copy todir="${build.doc.dir}">
+<!--    <copy todir="${build.doc.dir}">
       <fileset dir="${src.doc.dir}"/>
     </copy>
-
+-->
     <!-- Copy generated javadoc into the forrest structure in the temporary directory -->
-    <antcall target="javadoc"/>
+<!--    <antcall target="javadoc"/>
     <copy todir="${forrest.javadoc.destdir}">
       <fileset dir="${build.javadoc.dir}"/>
     </copy>
+    -->
     <!-- Copy generated schema doc into the forrest structure in the temporary directory -->
-    <antcall target="schemadoc"/>
+ <!--   <antcall target="schemadoc"/>
     <copy todir="${forrest.schemadoc.destdir}">
       <fileset dir="${build.schemadoc.dir}"/>
     </copy>
+    -->
     <!-- Copy generated ant doc into the forrest structure in the temporary directory -->
-    <antcall target="antdoc"/>
+ <!--   <antcall target="antdoc"/>
     <copy todir="${forrest.antdoc.destdir}">
       <fileset dir="${build.antdoc.dir}"/>
     </copy>
@@ -142,8 +144,9 @@
          target="site">
       <property name="forrest.home" value="${env.FORREST_HOME}"/>
     </ant>
+    -->
     <!-- Finally we can copy the generated documentation to its designated place -->
-    <mkdir dir="${doc.dir}"/>
+ <!--   <mkdir dir="${doc.dir}"/>
     <copy todir="${doc.dir}">
       <fileset dir="${forrest.output.dir}"/>
     </copy>
@@ -161,11 +164,11 @@
       <property name="docbook.file" value="manual"/>
     </ant>
   </target>
-
+-->
   <!-- ================================================================== -->
   <!-- Build the API JavaDocs                                             -->
   <!-- ================================================================== -->
-  <target name="javadoc"
+<!--  <target name="javadoc"
           depends="init"
           description="Builds the API javadocs.">
     <mkdir dir="${build.javadoc.dir}"/>
@@ -190,12 +193,11 @@
       <link href="http://jakarta.apache.org/commons/betwixt/apidocs/"/>
     </javadoc> 
   </target>
-
+-->
   <!-- ================================================================== -->
   <!-- Builds the documentation for the database XML schema format        -->
   <!-- ================================================================== -->
-  <target name="schemadoc"
-          description="Builds the documentation for the database XML schema format">
+<!--          description="Builds the documentation for the database XML schema format">
     <available classname="DTDDoc.DTDDocTask"
                classpathref="compilation-classpath"
                property="dtddoc.available"/>
@@ -207,11 +209,11 @@
     <mkdir dir="${build.schemadoc.dir}"/>
     <dtddoc destdir="${build.schemadoc.dir}" sourcedir="${src.java.dir}" includes="*.dtd"/>
   </target>
-
+-->
   <!-- ================================================================== -->
   <!-- Builds the documentation for the Ant tasks                         -->
   <!-- ================================================================== -->
-  <target name="antdoc"
+<!--  <target name="antdoc"
           description="Builds the documentation for the Ant tasks">
     <available classname="com.neuroning.antdoclet.AntDoclet"
                classpathref="compilation-classpath"
@@ -237,12 +239,11 @@
       <fileset dir="${antdoc.templates.dir}/html" includes="*.htm*"/>
     </copy>
   </target>
-
+-->
   <!-- ================================================================== -->
   <!-- Checks the docs for broken links                                   -->
   <!-- ================================================================== -->
-  <target name="check-doc"
-          description="Checks the doc for broken links using linklint">
+<!--          description="Checks the doc for broken links using linklint">
     <echo>Running linklint on ${build.doc.dir}. The output can be found in linklint.log.</echo>
     <exec executable="linklint">
       <arg line="-quiet"/>
@@ -256,21 +257,23 @@
       <arg line="/@"/>
     </exec>
   </target>
-
+-->
   <!-- ================================================================== -->
   <!-- Build the doc archive                                              -->
   <!-- ================================================================== -->
-  <target name="doc-archive" depends="doc"
+ <!-- <target name="doc-archive" depends="doc"
           description="Builds the complete documentation archive.">
     <zip zipfile="${dist.dir}/${dist.doc.filename.prefix}.zip"
          basedir="."
          includes="${dist.doc.includes}"/>
   </target>
-
+-->
   <!-- ================================================================== -->
   <!-- Build the src archive                                              -->
   <!-- ================================================================== -->
-  <target name="src-archive" depends="doc"
+  <!-- <target name="src-archive" depends="doc"
+          description="Builds the source distribution archive."> -->
+          <target name="src-archive" 
           description="Builds the source distribution archive.">
     <zip zipfile="${dist.dir}/${dist.src.filename.prefix}.zip"
          basedir="."
@@ -282,8 +285,10 @@
   <!-- ================================================================== -->
   <!-- Build the bin archive                                              -->
   <!-- ================================================================== -->
-  <target name="bin-archive" depends="jar,doc"
-          description="Builds the binary distribution archive.">
+  <!-- <target name="bin-archive" depends="jar,doc"
+          description="Builds the binary distribution archive."> -->
+          <target name="bin-archive" depends="jar"
+          description="Builds the binary distribution archive."> 
     <zip zipfile="${dist.dir}/${dist.bin.filename.prefix}.zip"
          basedir="."
          includes="${dist.bin.includes}"
@@ -293,10 +298,13 @@
   <!-- ================================================================== -->
   <!-- Creates the DdlUtils distribution                                  -->
   <!-- ================================================================== -->
-  <target name="dist"
+  <!--<target name="dist"
           description="Creates the distribution"
           depends="jar, doc-archive, src-archive, bin-archive"/>
-
+-->
+<target name="dist"
+          description="Creates the distribution"
+          depends="jar, src-archive, bin-archive"/>
   <target name="compile-tests"
           description="Compiles the unit tests"
           depends="compile">

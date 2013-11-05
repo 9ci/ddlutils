@@ -1,0 +1,12 @@
+Testsuite: org.apache.ddlutils.platform.TestMySqlPlatform
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,443 sec
+------------- Standard Error -----------------
+log4j:WARN No appenders could be found for logger (org.apache.ddlutils.platform.SqlBuilder).
+log4j:WARN Please initialize the log4j system properly.
+------------- ---------------- ---------------
+
+Testcase: testColumnTypes took 0,258 sec
+Testcase: testCreationParameters1 took 0,041 sec
+Testcase: testCharacterEscaping took 0,026 sec
+Testcase: testColumnConstraints took 0,025 sec
+Testcase: testTableConstraints took 0,035 sec
