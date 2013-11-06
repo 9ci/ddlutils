@@ -1,5 +1,0 @@
-Testsuite: org.apache.ddlutils.platform.TestSqlBuilder
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0,286 sec
-
-Testcase: testUpdateSql2 took 0,198 sec
-Testcase: testUpdateSql1 took 0,033 sec
