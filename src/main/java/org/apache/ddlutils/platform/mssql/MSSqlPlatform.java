@@ -83,7 +83,8 @@ public class MSSqlPlatform extends PlatformImplBase
 
         info.addNativeTypeMapping(Types.ARRAY,         "IMAGE",         Types.LONGVARBINARY);
         // BIGINT will be mapped back to BIGINT by the model reader 
-        info.addNativeTypeMapping(Types.BIGINT,        "DECIMAL(19,0)");
+        //commented below out so it uses integer instead
+        //info.addNativeTypeMapping(Types.BIGINT,        "DECIMAL(19,0)");
         info.addNativeTypeMapping(Types.BLOB,          "IMAGE",         Types.LONGVARBINARY);
         info.addNativeTypeMapping(Types.BOOLEAN,       "BIT",           Types.BIT);
         info.addNativeTypeMapping(Types.CLOB,          "TEXT",          Types.LONGVARCHAR);

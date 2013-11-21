@@ -103,7 +103,7 @@ public class DataWriter extends PrettyPrintingXmlWriter
     public void writeDocumentStart() throws DdlUtilsXMLException
     {
         super.writeDocumentStart();
-        writeElementStart(null, "data");
+        writeElementStart(null, "dataset");
         printlnIfPrettyPrinting();
     }
 

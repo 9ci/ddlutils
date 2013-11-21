@@ -62,6 +62,9 @@ public class DatabaseDataIO
     private boolean _determineSchema;
     /** The schema pattern for finding tables when reading data from a live database. @deprecated */
     private String _schemaPattern;
+
+    /** The type data insert to do. INSERT just tries to insert, INSERT_NEW will only insert if the row does not exist */
+    private String _dataLoadType = "INSERT";
     
     /**
      * Registers a converter.
@@ -111,6 +114,27 @@ public class DatabaseDataIO
     public void setUseBatchMode(boolean useBatchMode)
     {
         _useBatchMode = useBatchMode;
+    }
+
+    /**
+     * Specifies how to load the data. Insert will insert all and error if the row alrady exists.
+     * INSERT_NEW will only insert if the row exists
+     * 
+     * @param dataLoadType INSERT or INSERT_NEW
+     */
+    public void setDataLoadType(String dataLoadType)
+    {
+        _dataLoadType = dataLoadType;
+    }
+
+    /**
+     * Returns the batch size override.
+     * 
+     * @return how to load the data
+     */
+    public String getDataLoadType()
+    {
+        return _dataLoadType;
     }
 
     /**
@@ -554,6 +578,7 @@ public class DatabaseDataIO
         sink.setHaltOnErrors(_failOnError);
         sink.setEnsureForeignKeyOrder(_ensureFKOrder);
         sink.setUseBatchMode(_useBatchMode);
+        sink.setDataLoadType(_dataLoadType);
         if (_batchSize != null)
         {
             sink.setBatchSize(_batchSize.intValue());
