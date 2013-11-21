@@ -76,6 +76,9 @@ public class DataToDatabaseSink implements DataSink
     private HashMap _identityMap = new HashMap();
     /** Stores the objects that are waiting for other objects to be inserted. */
     private ArrayList _waitingObjects = new ArrayList();
+     /** Specifies how to load the data. Insert will insert all and error if the row alrady exists.
+        INSERT_NEW will only insert if the row exists */
+    private String _dataLoadType;
 
     /**
      * Creates a new sink instance.
